@@ -28,17 +28,21 @@
             font-family: 'Nunito', sans-serif;
             text-size-adjust: 100%;
             font-size: 16px;
+            color: #333;
         }
 
         body {
             margin: 0;
-            background-color: #FFD5E9;
-            padding: 32px;
         }
 
         .container {
-            max-width: 560px;
             margin: 0 auto;
+            padding: 32px;
+        }
+
+        .inner {
+            margin: 0 auto;
+            max-width: 560px;
         }
 
         .title {
@@ -107,9 +111,68 @@
             color: white;
         }
 
-        @media screen and (min-width: 1024px) {
-            .container {
-                max-width: 1024px;
+        .subtitle {
+            font-size: 36px;
+            font-weight: 700;
+            margin: 0;
+        }
+
+        .project {
+            margin-top: 96px;
+        }
+
+        .project:first-of-type {
+            margin-top: 48px;
+        }
+
+        .project-title {
+            margin: 0;
+            font-size: 28px;
+            font-weight: 700;
+            line-height: 28px;
+        }
+
+        .toolbox {
+            display: block;
+            font-weight: 700;
+            font-size: 14px;
+            margin-top: 4px;
+        }
+
+        .toolbox-list {
+            font-size: 14px;
+        }
+        
+        .description {
+            margin: 24px 0;
+            font-size: 16px;
+        }
+
+        .image-mobile {
+            display: block;
+            margin: 0 auto;
+            margin-top: 8px;
+        }
+
+        .image-desktop {
+            display: none;
+        }
+
+        .project-button {
+            display: block;
+            margin-top: 24px;
+            text-decoration: none;
+            color: inherit;
+            font-weight: 700;
+            font-size: 16px;
+            text-align: center;
+            padding: 12px 0;
+            border-radius: 32px;
+        }
+
+        @media screen and (min-width: 860px) {
+            .inner {
+                max-width: 860px;
             }
 
             .title {
@@ -131,68 +194,176 @@
             .footer-text {
                 text-align: right;
             }
+
+            .subtitle {
+                font-size: 48px;
+            }
+
+            .project {
+                display: flex;
+            }
+
+            .project-title {
+                font-size: 40px;
+                line-height: 40px;
+            }
+
+            .toolbox {
+                font-size: 16px;
+            }
+
+            .toolbox-list {
+                font-size: 16px;
+            }
+
+            .image-mobile {
+                display: none;
+            }
+
+            .image-desktop {
+                display: block;
+            }
+
+            .project-button {
+                display: inline-block;
+                padding-right: 42px;
+                padding-left: 42px;
+            }
         }
     </style>
 
 </head>
 <body>
-    <div class="container">
-        <h1 class="title">
-            <span class="text-1">Hello<span class="white-text">,</span> I'm Gabriella Bassani</span><br>
-            <span class="text-2">Product Designer UX & UI</span><br>
-            <span class="text-3">based in Curitiba<span class="white-text">.</span></span>
-        </h1>
-    
-        <span class="content-text">
-            Available for new challenges and projects or just a friendly talk
-            &nbsp;
-            <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M1.89297 3.54497C2.25895 3.28917 2.81065 3.33823 3.13926 3.6096L2.76237 3.06179C2.45907 2.62923 2.5677 2.16124 3.00065 1.85756C3.4336 1.55504 4.66042 2.36837 4.66042 2.36837C4.3544 1.93153 4.41163 1.37789 4.84847 1.07147C5.28532 0.766228 5.88802 0.87174 6.19404 1.30936L10.251 7.04049L9.73395 12.0533L5.41886 10.4796L1.65508 4.89911C1.34633 4.45954 1.45301 3.85333 1.89297 3.54497Z" fill="#E0AA94"/>
-                <path d="M1.04876 6.7333C1.04876 6.7333 0.608021 6.09089 1.25083 5.65054C1.89285 5.21019 2.3332 5.85222 2.3332 5.85222L4.37764 8.83381C4.44811 8.71623 4.5252 8.6002 4.61125 8.48574L1.77371 4.34819C1.77371 4.34819 1.33337 3.70616 1.97578 3.26581C2.61781 2.82547 3.05816 3.46749 3.05816 3.46749L5.7271 7.35976C5.82639 7.27877 5.92801 7.1974 6.03274 7.11758L2.93863 2.60471C2.93863 2.60471 2.49828 1.96268 3.1407 1.52233C3.78272 1.08199 4.22307 1.72401 4.22307 1.72401L7.31718 6.23611C7.43087 6.16642 7.54339 6.10607 7.6563 6.04222L4.76426 1.82485C4.76426 1.82485 4.32391 1.18283 4.96594 0.74248C5.60796 0.302133 6.04831 0.94416 6.04831 0.94416L9.10621 5.4037L9.57109 6.08193C7.64462 7.40336 7.46124 9.88932 8.56191 11.4946C8.78189 11.8158 9.1031 11.5958 9.1031 11.5958C7.78206 9.66895 8.18542 7.50381 10.1123 6.18277L9.54422 3.33979C9.54422 3.33979 9.33203 2.59069 10.0807 2.37811C10.8298 2.16592 11.0424 2.91501 11.0424 2.91501L11.6985 4.86329C11.9585 5.63574 12.2354 6.40548 12.6017 7.13355C13.6362 9.18928 13.0183 11.7441 11.0677 13.0823C8.93996 14.5412 6.03118 13.9988 4.57192 11.8715L1.04876 6.7333Z" fill="#F7DECE"/>
-                <path d="M4.67248 12.459C3.11511 12.459 1.54138 10.8853 1.54138 9.32788C1.54138 9.11257 1.3837 8.93854 1.16839 8.93854C0.953084 8.93854 0.762695 9.11257 0.762695 9.32788C0.762695 11.6639 2.33642 13.2377 4.67248 13.2377C4.88779 13.2377 5.06182 13.0473 5.06182 12.832C5.06182 12.6167 4.88779 12.459 4.67248 12.459Z" fill="#5DADEC"/>
-                <path d="M2.7254 13.2213C1.55737 13.2213 0.778686 12.4426 0.778686 11.2746C0.778686 11.0593 0.60465 10.8853 0.389343 10.8853C0.174036 10.8853 0 11.0593 0 11.2746C0 12.832 1.16803 14 2.7254 14C2.94071 14 3.11474 13.826 3.11474 13.6107C3.11474 13.3953 2.94071 13.2213 2.7254 13.2213ZM9.34423 0.762329C9.12932 0.762329 8.95489 0.936755 8.95489 1.15167C8.95489 1.36659 9.12932 1.54102 9.34423 1.54102C10.9016 1.54102 12.459 2.93837 12.459 4.65576C12.459 4.87068 12.6334 5.0451 12.8483 5.0451C13.0632 5.0451 13.2377 4.87068 13.2377 4.65576C13.2377 2.50892 11.6803 0.762329 9.34423 0.762329Z" fill="#5DADEC"/>
-                <path d="M11.2907 0C11.0758 0 10.9014 0.158073 10.9014 0.372991C10.9014 0.587908 11.0758 0.778686 11.2907 0.778686C12.4587 0.778686 13.2211 1.64497 13.2211 2.70905C13.2211 2.92397 13.4115 3.09839 13.6268 3.09839C13.8421 3.09839 13.9998 2.92397 13.9998 2.70905C13.9998 1.21514 12.8481 0 11.2907 0Z" fill="#5DADEC"/>
-            </svg>  
-        </span>
-    
-        <a href="https://drive.google.com/file/d/1j2GlleJk2npPGohhj8R0HU_Wt0LOJTuf/view?usp=sharing" class="link">
-            <i class="icon">
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M14 2H6C5.46957 2 4.96086 2.21071 4.58579 2.58579C4.21071 2.96086 4 3.46957 4 4V20C4 20.5304 4.21071 21.0391 4.58579 21.4142C4.96086 21.7893 5.46957 22 6 22H18C18.5304 22 19.0391 21.7893 19.4142 21.4142C19.7893 21.0391 20 20.5304 20 20V8L14 2Z" stroke="#333333" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                    <path d="M14 2V8H20" stroke="#333333" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                    <path d="M16 13H8" stroke="#333333" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                    <path d="M16 17H8" stroke="#333333" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                    <path d="M10 9H9H8" stroke="#333333" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                </svg>            
-            </i>
-    
-            <span class="link-text">Resume</span>
-        </a>
-    
-        <a href="https://www.linkedin.com/in/gabriella-bassani/" class="link">
-            <i class="icon">
-                <svg width="26" height="24" viewBox="0 0 26 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M16.889 8C18.5687 8 20.1796 8.63214 21.3673 9.75736C22.5551 10.8826 23.2223 12.4087 23.2223 14V21H19.0001V14C19.0001 13.4696 18.7777 12.9609 18.3818 12.5858C17.9859 12.2107 17.4489 12 16.889 12C16.3291 12 15.7921 12.2107 15.3962 12.5858C15.0003 12.9609 14.7779 13.4696 14.7779 14V21H10.5557V14C10.5557 12.4087 11.2229 10.8826 12.4107 9.75736C13.5984 8.63214 15.2093 8 16.889 8V8Z" stroke="#333333" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                    <path d="M6.33355 9H2.11133V21H6.33355V9Z" stroke="#333333" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                    <path d="M4.22244 6C5.38837 6 6.33355 5.10457 6.33355 4C6.33355 2.89543 5.38837 2 4.22244 2C3.0565 2 2.11133 2.89543 2.11133 4C2.11133 5.10457 3.0565 6 4.22244 6Z" stroke="#333333" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                </svg> 
-            </i>
-    
-            <span class="link-text">LinkedIn</span>
-        </a>
-    
-        <a href="mailto:gbs.bassani@gmail.com" class="link">
-            <i class="icon">
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M4 4H20C21.1 4 22 4.9 22 6V18C22 19.1 21.1 20 20 20H4C2.9 20 2 19.1 2 18V6C2 4.9 2.9 4 4 4Z" stroke="#333333" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                    <path d="M22 6L12 13L2 6" stroke="#333333" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                </svg>            
-            </i>
-    
-            <span class="link-text">gbs.bassani@gmail.com</span>
-        </a>
-    
-        <span class="footer-text">Created and developed by Gabriella Bassani</span>
+    <div class="container custom-background">
+        <div class="inner">
+            <h1 class="title">
+                <span class="text-1">Hello<span class="white-text">,</span> I'm Gabriella Bassani</span><br>
+                <span class="text-2">Product Designer UX & UI</span><br>
+                <span class="text-3">based in Curitiba<span class="white-text">.</span></span>
+            </h1>
+        
+            <span class="content-text">
+                Available for new challenges and projects or just a friendly talk
+                &nbsp;
+                <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M1.89297 3.54497C2.25895 3.28917 2.81065 3.33823 3.13926 3.6096L2.76237 3.06179C2.45907 2.62923 2.5677 2.16124 3.00065 1.85756C3.4336 1.55504 4.66042 2.36837 4.66042 2.36837C4.3544 1.93153 4.41163 1.37789 4.84847 1.07147C5.28532 0.766228 5.88802 0.87174 6.19404 1.30936L10.251 7.04049L9.73395 12.0533L5.41886 10.4796L1.65508 4.89911C1.34633 4.45954 1.45301 3.85333 1.89297 3.54497Z" fill="#E0AA94"/>
+                    <path d="M1.04876 6.7333C1.04876 6.7333 0.608021 6.09089 1.25083 5.65054C1.89285 5.21019 2.3332 5.85222 2.3332 5.85222L4.37764 8.83381C4.44811 8.71623 4.5252 8.6002 4.61125 8.48574L1.77371 4.34819C1.77371 4.34819 1.33337 3.70616 1.97578 3.26581C2.61781 2.82547 3.05816 3.46749 3.05816 3.46749L5.7271 7.35976C5.82639 7.27877 5.92801 7.1974 6.03274 7.11758L2.93863 2.60471C2.93863 2.60471 2.49828 1.96268 3.1407 1.52233C3.78272 1.08199 4.22307 1.72401 4.22307 1.72401L7.31718 6.23611C7.43087 6.16642 7.54339 6.10607 7.6563 6.04222L4.76426 1.82485C4.76426 1.82485 4.32391 1.18283 4.96594 0.74248C5.60796 0.302133 6.04831 0.94416 6.04831 0.94416L9.10621 5.4037L9.57109 6.08193C7.64462 7.40336 7.46124 9.88932 8.56191 11.4946C8.78189 11.8158 9.1031 11.5958 9.1031 11.5958C7.78206 9.66895 8.18542 7.50381 10.1123 6.18277L9.54422 3.33979C9.54422 3.33979 9.33203 2.59069 10.0807 2.37811C10.8298 2.16592 11.0424 2.91501 11.0424 2.91501L11.6985 4.86329C11.9585 5.63574 12.2354 6.40548 12.6017 7.13355C13.6362 9.18928 13.0183 11.7441 11.0677 13.0823C8.93996 14.5412 6.03118 13.9988 4.57192 11.8715L1.04876 6.7333Z" fill="#F7DECE"/>
+                    <path d="M4.67248 12.459C3.11511 12.459 1.54138 10.8853 1.54138 9.32788C1.54138 9.11257 1.3837 8.93854 1.16839 8.93854C0.953084 8.93854 0.762695 9.11257 0.762695 9.32788C0.762695 11.6639 2.33642 13.2377 4.67248 13.2377C4.88779 13.2377 5.06182 13.0473 5.06182 12.832C5.06182 12.6167 4.88779 12.459 4.67248 12.459Z" fill="#5DADEC"/>
+                    <path d="M2.7254 13.2213C1.55737 13.2213 0.778686 12.4426 0.778686 11.2746C0.778686 11.0593 0.60465 10.8853 0.389343 10.8853C0.174036 10.8853 0 11.0593 0 11.2746C0 12.832 1.16803 14 2.7254 14C2.94071 14 3.11474 13.826 3.11474 13.6107C3.11474 13.3953 2.94071 13.2213 2.7254 13.2213ZM9.34423 0.762329C9.12932 0.762329 8.95489 0.936755 8.95489 1.15167C8.95489 1.36659 9.12932 1.54102 9.34423 1.54102C10.9016 1.54102 12.459 2.93837 12.459 4.65576C12.459 4.87068 12.6334 5.0451 12.8483 5.0451C13.0632 5.0451 13.2377 4.87068 13.2377 4.65576C13.2377 2.50892 11.6803 0.762329 9.34423 0.762329Z" fill="#5DADEC"/>
+                    <path d="M11.2907 0C11.0758 0 10.9014 0.158073 10.9014 0.372991C10.9014 0.587908 11.0758 0.778686 11.2907 0.778686C12.4587 0.778686 13.2211 1.64497 13.2211 2.70905C13.2211 2.92397 13.4115 3.09839 13.6268 3.09839C13.8421 3.09839 13.9998 2.92397 13.9998 2.70905C13.9998 1.21514 12.8481 0 11.2907 0Z" fill="#5DADEC"/>
+                </svg>  
+            </span>
+        
+            <a href="https://drive.google.com/file/d/1xCDMtKQG3WmwMZr6ZiFpQjXhO-1qfmV2/view?usp=sharing" class="link">
+                <i class="icon">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M14 2H6C5.46957 2 4.96086 2.21071 4.58579 2.58579C4.21071 2.96086 4 3.46957 4 4V20C4 20.5304 4.21071 21.0391 4.58579 21.4142C4.96086 21.7893 5.46957 22 6 22H18C18.5304 22 19.0391 21.7893 19.4142 21.4142C19.7893 21.0391 20 20.5304 20 20V8L14 2Z" stroke="#333333" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M14 2V8H20" stroke="#333333" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M16 13H8" stroke="#333333" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M16 17H8" stroke="#333333" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M10 9H9H8" stroke="#333333" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>            
+                </i>
+        
+                <span class="link-text">Resume</span>
+            </a>
+        
+            <a href="https://www.linkedin.com/in/gabriella-bassani/" class="link">
+                <i class="icon">
+                    <svg width="26" height="24" viewBox="0 0 26 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M16.889 8C18.5687 8 20.1796 8.63214 21.3673 9.75736C22.5551 10.8826 23.2223 12.4087 23.2223 14V21H19.0001V14C19.0001 13.4696 18.7777 12.9609 18.3818 12.5858C17.9859 12.2107 17.4489 12 16.889 12C16.3291 12 15.7921 12.2107 15.3962 12.5858C15.0003 12.9609 14.7779 13.4696 14.7779 14V21H10.5557V14C10.5557 12.4087 11.2229 10.8826 12.4107 9.75736C13.5984 8.63214 15.2093 8 16.889 8V8Z" stroke="#333333" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M6.33355 9H2.11133V21H6.33355V9Z" stroke="#333333" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M4.22244 6C5.38837 6 6.33355 5.10457 6.33355 4C6.33355 2.89543 5.38837 2 4.22244 2C3.0565 2 2.11133 2.89543 2.11133 4C2.11133 5.10457 3.0565 6 4.22244 6Z" stroke="#333333" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg> 
+                </i>
+        
+                <span class="link-text">LinkedIn</span>
+            </a>
+        
+            <a href="mailto:gbs.bassani@gmail.com" class="link">
+                <i class="icon">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M4 4H20C21.1 4 22 4.9 22 6V18C22 19.1 21.1 20 20 20H4C2.9 20 2 19.1 2 18V6C2 4.9 2.9 4 4 4Z" stroke="#333333" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M22 6L12 13L2 6" stroke="#333333" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>            
+                </i>
+        
+                <span class="link-text">gbs.bassani@gmail.com</span>
+            </a>
+        </div>
+    </div>
+
+    <div class="container"> 
+        <div class="inner">
+            <h2 class="subtitle">My projects</h2>
+
+            <div class="project">
+                <div>
+                    <h3 class="project-title">AgropShop - <br> MarketPlace</h3>
+
+                    <span class="toolbox">Toolbox:</span>
+
+                    <span class="toolbox-list"> 
+                        Design Sprint • Benchmark • Adobe XD 
+                    </span>
+                    
+                    <p class="description">I worked as a Product Designer, implementing methodologies as benchmark, validating acessibility, creating wireframes and prototyping in the agribusiness app Agroshop that is available for Android and iOS.</p>
+                    <img class="image-mobile" src="agroshop.png" alt="mockup project AgropShop">
+
+                    <a class="project-button custom-background" href="https://play.google.com/store/apps/details?id=br.com.agroshopsc">
+                        View project    
+                    </a>
+                </div>
+
+                <img class="image-desktop" src="agroshop.png" alt="mockup project AgropShop">
+            </div>
+
+            <div class="project">
+                <div>
+                    <h3 class="project-title">SpeedApp - <br> MarketPlace</h3>
+
+                    <span class="toolbox">Toolbox:</span>
+
+                    <span class="toolbox-list"> 
+                        Design Sprint  • Benchmark • Adobe XD 
+                    </span>
+
+                    <p class="description">I worked as an UI Designer, implementing methodologies as benchmark, validating acessibility, creating wireframes and prototyping over a template in the marketplace app SpeedApphat is availablefor Android and iOS.</p>
+
+                    <img class="image-mobile" src="SpeedApp.png" alt="mockup project SpeedApp">
+
+                    <a class="project-button custom-background" href="https://play.google.com/store/apps/details?id=com.speedapp.marketplace">
+                        View project    
+                    </a>
+                </div>
+
+                <img class="image-desktop" src="SpeedApp.png" alt="mockup project SpeedApp">
+            </div>
+
+            <div class="project">
+                <div>
+                    <h3 class="project-title">Assine OCP News - <br> Landing page</h3>
+
+                    <span class="toolbox">Toolbox:</span>
+
+                    <span class="toolbox-list"> 
+                        Design Sprint  • Benchmark • Adobe XD 
+                    </span>
+
+                    <p class="description">I worked as an UI Designer, implementing methodologies as benchmark, validating acessibility, creating wireframes and prototyping a landing page for OCP News subscription plan website. </p>
+
+                    <img class="image-mobile" src="Assine-OCP.png" alt="mockup project Assine OCP News">
+
+                    <a class="project-button custom-background" href="https://assine.ocp.news/">
+                        View project    
+                    </a>
+                </div>
+
+                <img class="image-desktop" src="Assine-OCP.png" alt="mockup project Assine OCP News">
+            </div>
+
+            <span class="footer-text">Created and developed by Gabriella Bassani</span>
+        </div>
     </div>
 
     <script defer>
@@ -203,9 +374,13 @@
             '#BAFF96',
         ];
 
-        const body = document.getElementsByTagName('body')[0];
+        const selectedColor = colors[Math.floor(Math.random() * colors.length)];
 
-        body.style.backgroundColor = colors[Math.floor(Math.random() * colors.length)];
+        const elements = document.getElementsByClassName('custom-background');
+
+        Array.from(elements).forEach(element => {
+            element.style.backgroundColor = selectedColor;
+        });
     </script>
 </body>
 </html>
